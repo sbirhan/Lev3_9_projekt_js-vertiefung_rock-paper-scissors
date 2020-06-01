@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lev3_9_projekt_js-vertiefung_rock-paper-scissors</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="scoreboard">
+            <div class="labelPlayer1">YOU</div>
+            <div class="labelPlayer2">PC</div>
+            <div class="labelRound">ROUND</div>
+            <div class="scorePlayer1" id="scorePlayer1Value"></div>
+            <div class="numberRound" id="numberRoundValue"></div>
+            <div class="scorePlayer2" id="scorePlayer2Value"></div>
+        </div>
+        <div class="roundRange">
+            <h3 class="rangeText">0</h3>
+            <input type="range" min="0" max="20" value="10" class="rangeSlider" id="rangeSlider">
+            <h3 class="rangeText">20</h3>
+        </div>
+        <div class="buttonArea">
+            <div class="rockPaperScissors"><img src="assets/img/rock-paper-scissors-cropped.gif" alt="" id="imgRockPaperScissors"></div>
+            <div class="restart">
+                <p id="explanationArea">Lets start!</p>
+                <button id="buttonRestart">restart</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

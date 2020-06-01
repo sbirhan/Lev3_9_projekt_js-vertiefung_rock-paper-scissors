@@ -1,0 +1,208 @@
+html, body{
+    margin: 0;
+}
+
+body{
+    background-image: url("../img/background1.jpg");
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 2fr .3fr .9fr;
+    height: auto;
+    background: #d3d3d3;
+    margin: 2vw 20vw;
+}
+
+.scoreboard{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1.5fr 1fr;
+    background-color: rgb(4,44,90);
+    border: 4px solid rgb(37, 132, 238);
+    margin-left: 1vw;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    text-align: center;
+}
+
+.labelPlayer1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 2vw;
+}
+
+.labelPlayer2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    margin-right: 2vw;
+}
+
+.labelPlayer1, .labelPlayer2{
+    margin-top: 2vw;
+    background-color: rgb(15, 72, 136);
+    border: 4px solid rgb(37, 132, 238);
+    font-size: 3vw;
+    font-weight: 700;
+    color: white;
+}
+
+.labelRound{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-top: 4vw;
+    background-color: rgb(4,44,90);
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: white;
+}
+
+.scorePlayer1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 2vw;
+}
+
+.numberRound{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 0;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding-top: 1.75vw;
+    background-color: rgb(15, 72, 136);
+    border: 4px solid rgb(37, 132, 238);
+    font-size: 4vw;
+    font-weight: 700;
+    color: white;
+}
+
+.scorePlayer2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    margin-right: 2vw;
+}
+
+.scorePlayer1, .scorePlayer2{
+    grid-row-start: 2;
+    grid-row-end: 5;
+    margin-top: .5vw;
+    margin-bottom: 2vw;
+    padding-top: 4vw;
+    background-color: rgb(15, 72, 136);
+    border: 4px solid rgb(37, 132, 238);
+    font-size: 8vw;
+    font-weight: 700;
+    color: white;
+}
+
+.roundRange{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: grid;
+    grid-template-columns: .5fr 10fr .5fr;
+    background-color: rgb(4,44,90);
+    border: 4px solid rgb(37, 132, 238);
+    margin-left: 1vw;
+    margin-top: .25vw;
+    margin-right: 1vw;
+    text-align: center;
+}
+
+
+.rangeText{
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: white;
+}
+
+.rangeSlider {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-top: 1vw;
+    -webkit-appearance: none;
+    width: 52vw;
+    height: 2vw;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    clip-path: polygon(52vw 0px, 52vw 2vw, 0px 2vw, 0px 1.7vw);
+  }
+  
+  .rangeSlider:hover {
+    opacity: 1;
+  }
+
+  .rangeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2vw;
+    height: 2vw;
+    background: rgb(15, 72, 136);
+    cursor: pointer;
+  }
+
+.buttonArea{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: transparent;
+    border: none;
+    margin: 1vw;
+    margin-top: .25vw;
+}
+
+.rockPaperScissors{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: rgb(4,44,90);
+    border: 4px solid rgb(37, 132, 238);
+    margin: 0;
+}
+
+#imgRockPaperScissors{
+    border: 4px solid rgb(37, 132, 238);
+    width: 91%;
+    margin: 1vw;
+    cursor: pointer;
+}
+
+.restart{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(4,44,90);
+    border: 4px solid rgb(37, 132, 238);
+    margin-left: .25vw;
+    
+}
+#explanationArea{
+    flex: 100%;
+    margin-top: 3vw;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 700;
+    color: white;
+}
+
+#buttonRestart{
+    flex: 100%;
+    margin-left: 6vw;
+    margin-top: 0;
+    margin-right: 6vw;
+    margin-bottom: 3vw;
+    background-color: #d3d3d3;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: 700;
+    color: rgb(15, 72, 136);
+}
