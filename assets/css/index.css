@@ -4,6 +4,7 @@ html, body{
 
 body{
     background-image: url("../img/background1.jpg");
+    overflow: hidden;
 }
 
 .container{

@@ -6,7 +6,7 @@
     <title>Lev3_9_projekt_js-vertiefung_rock-paper-scissors</title>
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
-<body>
+<body id="bodyID">
     <div class="container">
         <div class="scoreboard">
             <div class="labelPlayer1">YOU</div>
@@ -17,9 +17,9 @@
             <div class="scorePlayer2" id="scorePlayer2Value"></div>
         </div>
         <div class="roundRange">
-            <h3 class="rangeText">0</h3>
+            <h3 class="rangeText" id="rangeTextMin">0</h3>
             <input type="range" min="0" max="20" value="10" class="rangeSlider" id="rangeSlider">
-            <h3 class="rangeText">20</h3>
+            <h3 class="rangeText" id="rangeTextMax">20</h3>
         </div>
         <div class="buttonArea">
             <div class="rockPaperScissors"><img src="assets/img/rock-paper-scissors-cropped.gif" alt="" id="imgRockPaperScissors"></div>

@@ -15,8 +15,14 @@ var message = document.getElementById("explanationArea");
 
 document.oncontextmenu = function() {return false;}
 
+document.getElementById("bodyID").addEventListener("onload", window.alert(
+`rock : left button of mouse / y
+paper : middle button of mouse / x
+scissors : right button of mouse / c`));
 document.getElementById("buttonRestart").addEventListener("click", restartGame);
 document.getElementById("imgRockPaperScissors").addEventListener("mousedown", assesButtonNumber);
+document.getElementById("bodyID").addEventListener("keydown", assesKeyNumber);
+document.getElementById("bodyID").addEventListener("keyup", selectItem);
 document.getElementById("imgRockPaperScissors").addEventListener("mouseup", selectItem);
 
 function selectItem(){
@@ -60,6 +66,10 @@ function selectItem(){
     else{
         round.innerHTML = "";
         document.getElementById("imgRockPaperScissors").style.visibility = "hidden";
+        document.getElementById("rangeSlider").style.visibility = "hidden";
+        document.getElementById("rangeTextMin").style.visibility = "hidden";
+        document.getElementById("rangeTextMax").style.visibility = "hidden";
+        document.getElementById("bodyID").removeEventListener("keydown", assesKeyNumber);
         message.innerHTML = "Game over.";
         player1Score.innerHTML = "";
         player2Score.innerHTML = "";
@@ -84,7 +94,6 @@ function selectItem(){
     }
 }
 
-
 function restartGame(){
     pastRoundNumber = 0;
     round.innerHTML = pastRoundNumber;
@@ -101,6 +110,9 @@ function restartGame(){
     player1Score.style.backgroundImage = "none";
     player2Score.style.backgroundImage = "none";
     document.getElementById("imgRockPaperScissors").style.visibility = "visible";
+    document.getElementById("rangeSlider").style.visibility = "visible";
+    document.getElementById("rangeTextMin").style.visibility = "visible";
+    document.getElementById("rangeTextMax").style.visibility = "visible";
 }
 
 function assesButtonNumber(event) {
@@ -116,5 +128,23 @@ function showMessage(item){
     }
     else{
         message.innerHTML = "Scissors cuts paper.";
+    }
+}
+
+function assesKeyNumber(event) {
+    var keyCode = event.which;
+    if (keyCode == 89 || keyCode == 88 || keyCode == 67) {
+        if (keyCode == 89){
+            mouseButtonNumber = 0;
+        }
+        else if (keyCode == 88){
+            mouseButtonNumber = 1;
+        }
+        else if(keyCode == 67){
+            mouseButtonNumber = 2;
+        }
+    }
+    else {
+        window.alert("Please press a valid key.");
     }
 }
